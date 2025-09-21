@@ -1,7 +1,7 @@
 # Customer Purchase Prediction  
 
 ## Overview  
-In today’s digital learning platforms, understanding user behavior is crucial for predicting customer decisions. This project builds a **machine learning model** that predicts whether a customer will make a purchase based on their engagement patterns — such as time spent on the platform, courses started, exams attempted, and geographical location. By analyzing these factors, the project helps uncover insights into customer behavior and identifies key drivers of purchase decisions, which can be valuable for targeted marketing and retention strategies.  
+In today’s digital learning platforms, understanding user behavior is crucial for predicting customer decisions. This project builds a ** Supervised Machine Learning Model** that predicts whether a customer will make a purchase based on their engagement patterns — such as time spent on the platform, courses started, exams attempted, and geographical location. By analyzing these factors, the project helps uncover insights into customer behavior and identifies key drivers of purchase decisions, which can be valuable for targeted marketing and retention strategies.  
 
 ---
 
