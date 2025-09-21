@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Purchase Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .field {
+            margin-bottom: 15px;
+        }
+        .prediction {
+            text-align: center;
+            font-size: 1.3em;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .will-purchase {
+            color: green;
+        }
+        .will-not-purchase {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Purchase Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="field">
+                <label>Days on Platform:</label>
+                <input type="number" name="days_on_platform" step="1" min="0" required>
+            </div>
+            <div class="field">
+                <label>Minutes Watched:</label>
+                <input type="number" name="minutes_watched" step="1" min="0" required>
+            </div>
+            <div class="field">
+                <label>Courses Started:</label>
+                <input type="number" name="courses_started" step="1" min="0" required>
+            </div>
+            <div class="field">
+                <label>Practice Exams Passed:</label>
+                <input type="number" name="practice_exams_passed" step="1" min="0" required>
+            </div>
+            <div class="field">
+                <label>Minutes Spent on Exams:</label>
+                <input type="number" name="minutes_spent_on_exams" step="1" min="0" required>
+            </div>
+            <div class="field">
+                <label>Student Country:</label>
+                <input type="text" name="student_country" placeholder="e.g., India" required>
+            </div>
+            <div class="field" style="text-align:center;">
+                <button class="ui button primary" type="submit">Predict</button>
+            </div>
+        </form>
+
+        {% if prediction_text %}
+        <div class="prediction {% if 'Will Purchase' in prediction_text %}will-purchase{% else %}will-not-purchase{% endif %}">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
