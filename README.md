@@ -32,7 +32,7 @@ Although still in prototype stage, the project is ready for deployment using **F
 ---
 
 ## How to Use  
-1. **Visit the Application**: https://customer-purchase-prediction-kx9p.onrender.com/
+1. **Visit the Application**: https://subscription-purchase-prediction.onrender.com
 2. **Input Data**: Enter details such as days on platform, minutes watched, courses started, practice exams, and country.  
 3. **Submit**: Send your data for analysis.  
 4. **Get Prediction**: Instantly receive whether the customer is likely to **Purchase** or **Not Purchase**.  
